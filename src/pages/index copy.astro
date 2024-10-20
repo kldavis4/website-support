@@ -1,0 +1,90 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import ResponsiveHero from '~/components/widgets/ResponsiveHero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import HomepageOutline from '~/components/widgets/HomepageOutline.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <ResponsiveHero
+  image={{ src: '~/assets/images/hero.png', alt: 'AstroWind Hero Image' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get started',
+        href: 'https://github.com/onwidget/astrowind',
+        target: '_blank',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+    RESULTS DRIVEN MARKETING COLLECTIVE
+    </Fragment>
+
+    <Fragment slot="subtitle">
+    </Fragment>
+  </Homehero>
+
+  <!-- Move this to "why marketing"/somewhere else ************** -->
+ <!-- Replace with service overview -->
+
+   <!-- Add a section on services ****************** -->
+ <!-- Features2 Widget ************** -->
+
+ <Features2
+ title="What can we do for you?"
+ subtitle="Tailored solutions to grow your brand and meet your goals."
+ columns={3}
+ items={[
+   {
+     title: 'Marketing Strategy',
+     description:
+       'A great strategy guides decision making. We analyse your brand, audience, and industry to carve out your position in the market, and prepare you for anything.',
+     icon: 'tabler:school',
+   },
+   {
+     title: 'Branding & Design',
+     description: `Your brand identity sets you apart from your competitors. It encompasses not only the visual presentation, but also the messaging and purpose of your brand.`,
+     icon: 'tabler:photo',
+   },
+   {
+     title: 'Content Marketing',
+     description:
+       'Content is the cornerstone of marketing. Telling an engaging story with SEO in mind ensures that you have an audience waiting to listen when you need it.',
+     icon: 'tabler:home-star',
+   },
+ ]}
+/>
+  <CallToAction
+  actions={[{
+    variant: "primary",
+    text: 'Contact us',
+    href: '/',
+  }]}
+  title="Ready? Let&apos;s Go!"
+  subtitle="We can get the ball rolling by discussing your goals and challenges over a quick email or call."
+/>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Latest articles:"
+                `}
+  />
+</Layout>

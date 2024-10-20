@@ -1,0 +1,91 @@
+---
+import Button from '~/components/ui/Button.astro';
+import type { CallToAction } from '~/types';
+
+export interface Props {
+  id?: string;
+  title?: string;
+  subtitle?: string;
+  tagline?: string;
+  content?: string;
+  actions?: string | CallToAction[];
+  video?: string | any; // Change from image to video
+}
+
+const {
+  id,
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline,
+  content = await Astro.slots.render('content'),
+  actions = await Astro.slots.render('actions'),
+  video = await Astro.slots.render('video'), // Change from image to video
+} = Astro.props;
+---
+<section class="relative md:-mt-[76px] not-prose" {...id ? { id } : {}}>
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+  <div class="relative w-full h-screen overflow-hidden">
+    {
+      video && (
+        <div class="absolute inset-0 w-full h-full">
+          {typeof video === 'string' ? (
+            <video
+              class="object-cover w-full h-full"
+              autoplay
+              loop
+              muted
+              playsinline
+              src={video}
+            ></video>
+          ) : (
+            <video
+              class="object-cover w-full h-full"
+              autoplay
+              loop
+              muted
+              playsinline
+              {...video}
+            ></video>
+          )}
+        </div>
+      )
+    }
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center max-w-5xl mx-auto px-4 sm:px-6 pb-12 md:pb-20">
+      {
+        tagline && (
+          <p
+            class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase"
+            set:html={tagline}
+          />
+        )
+      }
+      {
+        title && (
+          <h1
+            class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
+            set:html={title}
+          />
+        )
+      }
+      <div class="max-w-3xl mx-auto">
+        {subtitle && <p class="text-xl text-default mb-6 dark:text-grey-300" set:html={subtitle} />}
+        {
+          actions && (
+            <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
+              {Array.isArray(actions) ? (
+                actions.map((action) => (
+                  <div class="flex w-full sm:w-auto">
+                    <Button {...(action || {})} class="w-full sm:mb-0" />
+                  </div>
+                ))
+              ) : (
+                <Fragment set:html={actions} />
+              )}
+            </div>
+          )
+        }
+      </div>
+      {content && <Fragment set:html={content} />}
+    </div>
+  </div>
+</section>

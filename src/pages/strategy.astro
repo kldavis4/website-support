@@ -1,0 +1,111 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import ResponsiveHero from '~/components/widgets/ResponsiveHero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'Strategy',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <ResponsiveHero
+    tagline=""
+    image={{
+      src: 'https://images.unsplash.com/photo-1468436139062-f60a71c5c892?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Caos Image',
+    }}
+  >
+    <Fragment slot="title">
+      DIGITAL MARKETING
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Digtial is more than a website or a social media profile. We work as an extension of your brand, to concieve, develop and integrate strategies that connect your with your audience.
+    </Fragment>
+  </Hero>
+
+  
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Digital is for every business, especially yours"
+    subtitle="Digital marketing is a comprehensive practice with extreme potential, all it takes is the right strategy."
+    items={[
+      {
+        title: 'Highly adaptable',
+        description:
+          'Even physical businesses, serving spesific geographic areas, need digital marketing. Local SEO gives you an edge over businesses yet to build their digital presence.',
+      },
+      {
+        title: 'Cost-effective marketing',
+        description:
+          'Compared to traditional methods like print ads or direct mail, digital marketing is extremely cost-effective. It also returns important data to compound your growth.',
+      },
+      {
+        title: 'Reach and growth',
+        description:
+          'Digital marketing gives your brand the tools to identify and quickly engage members of large communities, key to growing a sustainable audience.',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features2
+    title="The components of a digital marketing strategy"
+    subtitle="There really is no one-size-fits-all answer. But we offer everything need to improve the visability of your brand."
+    columns={4}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'BRANDING',
+        description:
+          'A strong identity makes everything else fall into place. It dictates how you communicate with your audience to acheive your objectives.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'CONTENT STRATEGY',
+        description:
+          'Stemming from your branding, audience and market landscape. Your content strategy predicts the best way to reach your future customers.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'SEO',
+        description:
+          'Search engine optimisation ensures that when your audience needs something, at any stage of their journey, your brand is there to answer.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'SOCIAL MEDIA',
+        description:
+          'Social media allows you to reach people in more ways, and grow a captive audience. It can also provide unique insights, and repeat conversions.',
+        icon: 'tabler:template',
+      },
+    ]}
+  />
+
+  <CallToAction
+  actions={[{
+    variant: "primary",
+    text: 'Contact us',
+    href: '/',
+  }]}
+  title="Ready? Let&apos;s Go!"
+  subtitle="We can get the ball rolling by discussing your goals and challenges over a quick email or call."
+/>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Latest articles:"
+                `}
+  />
+</Layout>

@@ -1,0 +1,105 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import ResponsiveHero from '~/components/widgets/ResponsiveHero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'Branding',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <ResponsiveHero
+    tagline=""
+    image={{
+      src: 'https://images.unsplash.com/photo-1685964453698-0d1a2e3637c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Caos Image',
+    }}
+  >
+    <Fragment slot="title">
+      BRANDING
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      It's not just a name or a logo; your brand is every and any reason that your audience wants what you offer. From brand strategy to visual identity design, we know how to make every interaction leave a lasting impression.
+    </Fragment>
+  </Hero>
+
+  
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="You&apos;re more than a business"
+    subtitle=" We aim to know your story through and through, so that your audience can know it at a glance."
+    items={[
+      {
+        title: 'Develop emotional connection',
+        description:
+          'Putting a face to your brand, being active in your community and taking on social responsibility are all great ways to engage your audience.',
+      },
+      {
+        title: 'Prioritise Authenticity',
+        description:
+          'Branding shouldn&apos;t be a facade, and your audience will know if it is. Your brand should be informed and knowledgeable to build trust within your community. ',
+      },
+      {
+        title: 'Position yourself in the market',
+        description:
+          'Innovation and differentiation should fuel your brand strategy. Daring to be different sparks interest and creates opportunity to be stronger than your competitors.',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features2
+    title="What makes a remarkable brand?"
+    subtitle="There really is no one-size-fits-all answer. But we offer everything need to improve the visability of your brand."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Brand Strategy',
+        description:
+          'Research, implement, evaluate. Your strategy keeps you going in the right direction, carving out your space in the market and building your community.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Brand Identity & Design',
+        description:
+          'Your name, logo, colours and typography are just the start. Your brand&apos;s identity is built over time through consistant and deliberate guidelines.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Brand Experience & Monitoring',
+        description:
+          'Keeping an eye on your audience gives you a wealth of information. Unifying customer experience and brand personality is the key to sustainable business.',
+        icon: 'tabler:template',
+      },
+    ]}
+  />
+
+  <CallToAction
+  actions={[{
+    variant: "primary",
+    text: 'Contact us',
+    href: '/',
+  }]}
+  title="Ready? Let&apos;s Go!"
+  subtitle="We can get the ball rolling by discussing your goals and challenges over a quick email or call."
+/>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Latest articles:"
+                `}
+  />
+</Layout>

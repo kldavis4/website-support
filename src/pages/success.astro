@@ -1,0 +1,41 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import VideoHero from '~/components/widgets/VideoHero.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'Slinkycat - Results Driven Marketing',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+  <VideoHero
+  video={{ src: '/assets/videos/hero.mp4', alt: 'Slinkycat Hero Video' }}
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Home',
+      href: '/',
+      target: '_blank',
+    },
+  ]}
+>
+    <Fragment slot="title">
+   THANK YOU
+    </Fragment>
+
+    <Fragment slot="subtitle">
+    We will get back to you as soon as possible.
+    </Fragment>
+  </VideoHero>
+
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Latest articles:"
+  />
+</Layout>

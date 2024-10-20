@@ -1,0 +1,112 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import ResponsiveHero from '~/components/widgets/ResponsiveHero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import HomepageOutline from '~/components/widgets/HomepageOutline.astro';
+
+const metadata = {
+  title: 'About',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <ResponsiveHero
+    title="ABOUT US"
+    subtitle=""
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Slinkycat Hero Image',
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Around For The Long-Haul',
+        description:
+          'We are an ambitious bunch who aim to create long term strategies that grow with your brand.',
+        icon: 'tabler:wand',
+      },
+      {
+        title: 'Holistic Marketing Expertise',
+        description:
+          'We are immersed in the marketing field, and know what needs to be done.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Dynamic Engagement Tactics',
+        description:
+          'We work to understand your audience, so that they get what they need in order to convert.',
+        icon: 'tabler:carousel-horizontal',
+      },
+      {
+        title: 'Analytical Approach',
+        description:
+          'We&apos;re goal oriented, and our decisions are informed by research and what is best for your brand.',
+        icon: 'tabler:presentation',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+      alt: 'Features Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">How do we make an impact?</h3>
+    </Fragment>
+  </Content>
+
+  <HomepageOutline
+    title="You&apos;ve got a dream, we make it happen."
+    items={[
+      {
+        title: 'Research',
+        description: "Our process begins with in-depth market research. Analysing industry trends, competitor landscapes, and consumer behavior to gain valuable insights.",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Strategy',
+        description:
+          "Armed with research, we craft a tailored marketing strategy, outlining clear objectives, target audience identification, and the most effective channels for your brand.",
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Action',
+        description:
+          'With a solid strategy in place, we execute dynamic marketing campaigns, leveraging creative content and strategic engagement to maximize reach and impact.',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Success',
+        description:
+          "We closely monitor campaign performance and provide transparent reports, ensuring your marketing investment translates into measurable success for your business.",
+        icon: 'flat-color-icons:document',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </HomepageOutline>
+
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[{
+      variant: "primary",
+      text: 'Contact us',
+      href: '/',
+    }]}
+    title="Ready? Let&apos;s Go!"
+    subtitle="We can get the ball rolling by discussing your goals and challenges."
+  />
+</Layout>

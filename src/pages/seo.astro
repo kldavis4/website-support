@@ -1,0 +1,105 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import ResponsiveHero from '~/components/widgets/ResponsiveHero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'SEO',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <ResponsiveHero
+    tagline=""
+    image={{
+      src: 'https://images.unsplash.com/photo-1685964453698-0d1a2e3637c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Caos Image',
+    }}
+  >
+    <Fragment slot="title">
+      SEARCH ENGINE OPTIMISATION
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      The goal of SEO is increase your visability on search engines such as Google. There are countless strategies for short-term success, but incorporating a bespoke strategy into the core of your business yields the best results.
+    </Fragment>
+  </Hero>
+
+  
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="It&apos;s time to rethink SEO"
+    subtitle="Providing outstanding solutions is key to a good business, just as providing outstanding content should be at the heart of every SEO strategy."
+    items={[
+      {
+        title: 'Search engines are always improving',
+        description:
+          'Even if it works temporarily, any short-term exploit will eventually be fixed. Search engines want informative and entertaining content, so that&apos;s what you give them.',
+      },
+      {
+        title: 'Customer-centric approach',
+        description:
+          'Don&apos;t let the name mislead you. SEO is about proving that you make the best content possible, and making sure that it reaches your target audience.',
+      },
+      {
+        title: 'Long-term strategy',
+        description:
+          'The competition for top rankings can be fierce. An SEO strategy is a chance to establish your brand for a sustainable future, with a catalogue of content that converts.',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features2
+    title="What makes a great SEO strategy?"
+    subtitle="There really is no one-size-fits-all answer. But we offer everything need to improve the visability of your brand."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Content Strategy',
+        description:
+          'Search engines serve users the most useful sites. A content strategy exposes your brand to people that didn&apos;t know they needed you.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Web Development',
+        description:
+          'A dedicated website is essential for SEO. While mediums like social media can get you seen, they barely scratch the surface.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Technical SEO',
+        description:
+          'Numerous less apparent factors influence your search engine ranking. Including: user experience, accessability, and page speed.',
+        icon: 'tabler:template',
+      },
+    ]}
+  />
+
+  <CallToAction
+  actions={[{
+    variant: "primary",
+    text: 'Contact us',
+    href: '/',
+  }]}
+  title="Ready? Let&apos;s Go!"
+  subtitle="We can get the ball rolling by discussing your goals and challenges over a quick email or call."
+/>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Latest articles:"
+                `}
+  />
+</Layout>

@@ -1,0 +1,115 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import ResponsiveHero from '~/components/widgets/ResponsiveHero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import HomepageOutline from '~/components/widgets/HomepageOutline.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <ResponsiveHero
+    image={{ src: '~/assets/images/hero.png', alt: 'AstroWind Hero Image' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get started',
+        href: 'https://github.com/onwidget/astrowind',
+        target: '_blank',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Results driven marketing collective
+    </Fragment>
+
+    <Fragment slot="subtitle">
+    </Fragment>
+  </Homehero2>
+
+  <!-- Move this to "why marketing"/somewhere else ************** -->
+ <!-- Replace with service overview -->
+
+  <HomepageOutline
+    title="You&apos;ve got a dream, we make it happen."
+    items={[
+      {
+        title: 'Research',
+        description: "Our process begins with in-depth market research. Analyzing industry trends, competitor landscapes, and consumer behavior to gain valuable insights.",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Strategy',
+        description:
+          "Armed with research, we craft a tailored marketing strategy, outlining clear objectives, target audience identification, and the most effective channels for your brand.",
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Action',
+        description:
+          'With a solid strategy in place, we execute dynamic marketing campaigns, leveraging creative content and strategic engagement to maximize reach and impact.',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Success',
+        description:
+          "We closely monitor campaign performance and provide transparent reports, ensuring your marketing investment translates into measurable success for your business.",
+        icon: 'flat-color-icons:document',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50"></div>
+    </Fragment>
+  </HomepageOutline>
+
+  <CallToAction
+    actions={[
+      {
+        variant: "primary",
+        text: 'Contact us',
+        href: '/',
+      },
+      {
+        text: 'Learn more',
+        href: 'services',
+      },
+    ]}
+    title="Let&apos;s work together"
+    subtitle="Tell us about yourself, or find out more about what we do."
+  />
+
+   <!-- Add a section on services ****************** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: "primary",
+        text: 'Contact us',
+        href: '/',
+      }
+    ]}
+    title="Ready? Let&apos;s Go!"
+    subtitle="We can get the ball rolling by discussing your goals and challenges over a quick email or call."
+  />
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Latest articles:"
+  />
+</Layout>

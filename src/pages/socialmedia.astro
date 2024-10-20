@@ -1,0 +1,105 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import ResponsiveHero from '~/components/widgets/ResponsiveHero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'Social Media',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <ResponsiveHero
+    tagline=""
+    image={{
+      src: 'https://images.unsplash.com/photo-1685964453698-0d1a2e3637c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Caos Image',
+    }}
+  >
+    <Fragment slot="title">
+      SOCIAL MEDIA
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Forget the generic approach that makes your brand look and sound like everything else. We help you develop a bold strategy that gets you noticed, by the right people, at the right time.
+    </Fragment>
+  </Hero>
+
+  
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Thumb-stopping content"
+    subtitle="Your followers and engagement statistics are not just numbers. They represent individuals that your brand has had a positive impact on. Keep them keen!"
+    items={[
+      {
+        title: 'Be significant or be ignored',
+        description:
+          'Social media is a powerful tool when it is treated like one. A meticulously crafted social media strategy keeps people hooked.',
+      },
+      {
+        title: 'Your product speaks for itself',
+        description:
+          'We help you tell the right story. One that represents your brand and resonates with your customers throughout their journey.',
+      },
+      {
+        title: 'Integrated marketing strategy',
+        description:
+          'Growing an audience on social media is about more than sales. Community engagement and analytics give you unique insights about your target audience.',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features2
+    title="What makes a great social media strategy?"
+    subtitle="Your strategy must be tailored and dynamic to your brand&apos;s shifting needs."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Targeting and Engagement',
+        description:
+          'Above all else, your content&apos;s success is determined by its ability to engage your target audience.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Content Planning and Creation',
+        description:
+          'A sucessful strategy, with clear objectives, will allow you to schedule posts far in advance, keeping your brand fresh in your audiences&apos; mind.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Scheduling and Goal Setting',
+        description:
+          'A sucessful strategy, with clear objectives, will allow you to schedule posts far in advance, keeping your brand fresh in your audiences&apos; mind.',
+        icon: 'tabler:template',
+      },
+    ]}
+  />
+
+  <CallToAction
+  actions={[{
+    variant: "primary",
+    text: 'Contact us',
+    href: '/',
+  }]}
+  title="Ready? Let&apos;s Go!"
+  subtitle="We can get the ball rolling by discussing your goals and challenges over a quick email or call."
+/>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Latest articles:"
+                `}
+  />
+</Layout>
